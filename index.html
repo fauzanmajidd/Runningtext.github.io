@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Running Text</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: SILVER;
+            color: PURPLE;
+            font-family: 'Roboto Slab', serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        #scrollingTextHorizontal {
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            box-sizing: border-box;
+            font-size: 28px;
+            padding: 10px 0;
+        }
+        
+        #scrollingTextHorizontal span {
+            display: inline-block;
+            padding-left: 100%;
+            animation: scrollTextHorizontal 10s linear infinite;
+        }
+        
+        @keyframes scrollTextHorizontal {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        #scrollingTextVertical {
+            width: 100%;
+            text-align: center;
+            font-size: 28px;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+
+        #scrollingTextVertical span {
+            display: inline-block;
+            animation: scrollTextVertical 5s linear infinite;
+        }
+
+        @keyframes scrollTextVertical {
+            0% {
+                transform: translateY(-100%);
+            }
+            100% {
+                transform: translateY(100%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="scrollingTextHorizontal">
+        <span>FAUZAN MAJID</span>
+    </div>
+
+    <div id="scrollingTextVertical">
+        <span>FAUZAN MAJID</span>
+    </div>
+</body>
+</html>
